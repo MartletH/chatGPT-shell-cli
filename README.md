@@ -14,7 +14,7 @@ alias chatgpt ./chatgpt_m.sh
 
 ```shell
 $ chatgpt
-$ chatgpt -ip <your file>
+$ chatgpt -f <your file>
 mass of sun
 image: cat
 history
@@ -24,7 +24,7 @@ $ echo "How to view running processes on Ubuntu?" | chatgpt
 $ chatgpt -p "What is the regex to match an email address?"
 ```
   - -i, you can set your own initial chat prompt to use in chat context mode. 
-  - -ip, You can also set an initial chat prompt from a file with `--init-prompt-from-file` i.e. `chatgpt --init-prompt-from-file myprompt.txt`
+  - -f / -ip, You can also set an initial chat prompt from a file with `--init-prompt-from-file` i.e. `chatgpt --init-prompt-from-file myprompt.txt`
   - `image:` To generate images, start a prompt with `image:`
     If you are using iTerm, you can view the image directly in the terminal. Otherwise the script will ask to open the image in your browser.
   - `history` To view your chat history, type `history`
@@ -37,9 +37,7 @@ $ chatgpt -p "What is the regex to match an email address?"
   - If you have access to the GPT4 model you can use it by setting the model to `gpt-4`, i.e. `chatgpt --model gpt-4`
 
 ## Set request parameters
-
   - To set request parameters you can start the script like this: `chatgpt --temperature 0.9 --model text-babbage:001 --max-tokens 100 --size 1024x1024`
-  
     The available parameters are: 
       - temperature,  `-t` or `--temperature`
       - model, `-m` or `--model`
@@ -49,7 +47,7 @@ $ chatgpt -p "What is the regex to match an email address?"
       - prompt from a file in your file system, `-pf or --prompt-from-file`  
 
 ## Defaults
-TEMPERATURE = 0.5
-MAX_TOKENS = 1024
-SIZE = 512x512
-CONTEXT = ture
+- TEMPERATURE = 0.5
+- MAX_TOKENS = 1024
+- SIZE = 512x512
+- CONTEXT = ture
