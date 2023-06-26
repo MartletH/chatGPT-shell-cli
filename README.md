@@ -9,8 +9,8 @@ original repo 0xacx / chatGPT-shell-cli.
 - If you are using iTerm and want to view images in terminal, install [imgcat](https://iterm2.com/utilities/imgcat)
 
 ## usage,
-./chatgpt_m.sh
-alias chatgpt ./chatgpt_m.sh
+- ./chatgpt_m.sh
+- set alias 'chatgpt' for './chatgpt_m.sh'
 
 ```shell
 $ chatgpt
