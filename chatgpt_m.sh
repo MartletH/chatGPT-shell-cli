@@ -38,7 +38,7 @@ Commands:
 Options:
   -i, --init-prompt          Provide initial chat prompt to use in context
 
-  -ip, --init-prompt-from-file    Provide initial prompt from file
+  -f, -ip, --init-prompt-from-file    Provide initial prompt from file
 
   -p, --prompt               Provide prompt instead of starting chat
 
@@ -57,13 +57,7 @@ Options:
   -s, --size                 Image size. (The sizes that are accepted by the
                              OpenAI API are 256x256, 512x512, 1024x1024)
 
-  -c, --chat-context         For models that do not support chat context by
-                             default (all models except gpt-3.5-turbo and
-                             gpt-4), you can enable chat context, for the
-                             model to remember your previous questions and
-                             its previous answers. It also makes models
-                             aware of todays date and what data it was trained
-                             on.
+  -nc, --no-chat-context         No history context send to server in chat mode.
 
 EOF
 }
@@ -222,7 +216,7 @@ while [[ "$#" -gt 0 ]]; do
 		shift
 		shift
 		;;
-	-ip | --init-prompt-from-file)
+	-f | -ip | --init-prompt-from-file)
 		CHAT_INIT_PROMPT=$(cat "$2")
 		SYSTEM_PROMPT=$(cat "$2")
 		CONTEXT=true
